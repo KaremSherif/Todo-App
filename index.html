@@ -1,36 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Todo app</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Todo app</title>
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="/scss/main.css" />
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="top-img"></div>
+    <header>
+      <h1>Todo</h1>
+      <div class="themes">
+        <label for="theme"
+          ><img src="images/icon-sun.svg" alt="NA" title="Themes"
+        /></label>
+        <input type="checkbox" name="theme" id="theme" />
+      </div>
+    </header>
 
-  Todo
+    <main>
+      <div class="new-task">
+        <span></span>
+        <input
+          type="text"
+          id="add-item"
+          placeholder="Create a new todo..."
+          autocomplete="off"
+        />
+      </div>
+      <section class="tasks-content">
+        <!-- <ul>
+        <li>
+          <label class="listItem">
+            <input type="checkbox" name="todoItem" >
+            <span class="checkmark"></span>
+            <span class="text">text 3</span>
+          </label>
+          <span class="remove"></span>
+        </li>
+      </ul>
 
-  <!-- Add dynamic number --> items left
-
-  All
-  Active 
-  Completed
-
-  Clear Completed
-
-  Drag and drop to reorder list
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      <ul>
+        <li>
+          <label class="listItem">
+            <input type="checkbox" name="todoItem" >
+            <span class="checkmark"></span>
+            <span class="text">text 4</span>
+          </label>
+          <span class="remove"></span>
+        </li>
+      </ul> -->
+        <div class="details">
+          <div class="left-side"><span>0</span> items left</div>
+          <div class="center-side">
+            <span>
+              <input type="radio" name="filter" id="all" checked />
+              <label for="all">All</label>
+            </span>
+            <span>
+              <input type="radio" name="filter" id="active" />
+              <label for="active">Active</label>
+            </span>
+            <span>
+              <input type="radio" name="filter" id="completed" />
+              <label for="completed">Completed</label>
+            </span>
+          </div>
+          <div class="right-side">
+            <span>Clear completed</span>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="js/main.js"></script>
+  </body>
 </html>
