@@ -1,28 +1,4 @@
-// Import HTML Attributes
-const theme = document.querySelector("#theme");
-const newItem = document.querySelector("#add-item");
-const content = document.querySelector(".tasks-content ");
-const itemCount = document.querySelector(".left-side span");
 
-// Initaztion themes Changeing
-const themesbtn = () => {
-  theme.addEventListener("click", () => {
-    document.querySelector(".top-img").style = [
-      theme.checked
-        ? "background-image: url(../images/bg-desktop-light.jpg);"
-        : "background-image: url(../images/bg-desktop-dark.jpg);",
-    ];
-    document.querySelector("body").style = [
-      theme.checked
-        ? "background-color: #fff;"
-        : " background-color: hsl(235, 21%, 11%);",
-    ];
-    document.querySelector(".themes img").src = [
-      theme.checked ? "images/icon-moon.svg" : "images/icon-sun.svg",
-    ];
-  });
-};
-themesbtn();
 
 // updateValueToList
 const addItem = () => {
