@@ -1,4 +1,10 @@
 
+const theme = document.querySelector("#theme");
+const newItem = document.querySelector("#add-item");
+const content = document.querySelector(".tasks-content ");
+const itemCount = document.querySelector(".left-side span");
+
+// Initaztion themes Changeing
 
 // updateValueToList
 const addItem = () => {
